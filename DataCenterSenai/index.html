@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DataCenter SENAI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <meta name="description"
+    content="Página em construção! Em breve novidades incríveis estarão disponíveis aqui. Fique ligado!">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/senai_logo.png" fetchpriority="high">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/senai_logo.png" fetchpriority="high">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-container" id="inicio">
+      <img rel="preload" src="assets/img/logo_branco_vermelho.svg" alt="Logo SENAI" class="logo" />
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#hacks">Servidores</a></li>
+          <li><a href="#participantes">Equipe</a></li>
+        </ul>
+        <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+          <img src="assets/img/menu_hamburger.svg" alt="Menu" fetchpriority="high" />
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>DataCenter SENAI</h1>
+      <p class="frase-impacto">"Conectando servidores, integrando ideias."</p>
+    </section>
+
+    <section class="descricao-breve" id="hacks">
+      <p>O DataCenter SENAI é um ambiente dedicado à gestão e monitoramento de servidores de alta performance,
+        promovendo integração tecnológica e inovação no ensino técnico e profissionalizante. Aqui, cada servidor
+        representa uma peça fundamental para garantir a eficiência e a confiabilidade das operações digitais.</p>
+    </section>
+
+    <!-- Carrossel de Hacks -->
+    <section class="carrossel-servidores">
+      <button class="nav-btn prev">❮</button>
+      <div class="hack-container">
+        <div class="hack" data-index="0">
+          <img src="assets/img/hack_cinza.svg" alt="Hack 1" fetchpriority="high" />
+          <h3>Servidor 1</h3>
+        </div>
+        <div class="hack" data-index="1">
+          <img src="assets/img/hack_cinza.svg" alt="Hack 2" fetchpriority="high" />
+          <h3>Servidor 2</h3>
+        </div>
+        <div class="hack destaque" data-index="2">
+          <img src="assets/img/hack_vermelho.svg" alt="Hack 3" fetchpriority="high" />
+          <h3>Servidor 3</h3>
+        </div>
+        <div class="hack" data-index="3">
+          <img src="assets/img/hack_cinza.svg" alt="Hack 4" fetchpriority="high" />
+          <h3>Servidor 4</h3>
+        </div>
+        <div class="hack" data-index="4">
+          <img src="assets/img/hack_cinza.svg" alt="Hack 5" fetchpriority="high" />
+          <h3>Servidor 5</h3>
+        </div>
+      </div>
+      <button class="nav-btn next">❯</button>
+    </section>
+
+    <section class="descricao-detalhada">
+      <p>Nosso DataCenter é equipado com hardware de ponta e sistemas de monitoramento contínuo. Cada servidor é
+        configurado para desempenho otimizado, segurança de dados e suporte a múltiplas aplicações simultaneamente.</p>
+
+      <p>Além disso, promovemos a integração entre alunos, professores e projetos tecnológicos, tornando o DataCenter um
+        ambiente de aprendizado e inovação prática.</p>
+    </section>
+
+    <!-- Carômetro -->
+    <section class="carrossel-participantes" id="participantes">
+      <h2>Responsáveis pelo Projeto</h2>
+
+      <div class="carometro-wrapper">
+        <div class="carometro" id="carometro">
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-left">
+          <h4>Voltar na Página</h4>
+          <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#hacks">Servidores</a></li>
+            <li><a href="#participantes">Equipe</a></li>
+          </ul>
+        </div>
+        <div class="footer-right">
+          <h4>Contatos</h4>
+          <ul class="icons">
+            <li><a target="_blank" href="https://github.com/BielVereda/DataCenter_SENAI"><img
+                  src="assets/img/github_logo.svg" alt="GitHub" /></a></li>
+            <li><a target="_blank" href="https://www.instagram.com/senai.suico/"><img
+                  src="assets/img/instagram_logo.svg" alt="Instagram" /></a></li>
+            <li><a target="_blank"
+                href="https://www.figma.com/design/U9Hq2eVBVmsmTaV5tJJCy5/Landing-page?node-id=0-1&p=f&t=fimubzcc5Oe5p1XI-0"><img
+                  src="assets/img/figma_logo.svg" alt="Figma" /></a></li>
+            <li><a target="_blank" href="https://www.linkedin.com/school/senaisp-suico/posts/?feedView=all"><img
+                  src="assets/img/linkedin_logo.svg" alt="LinkedIn" /></a></li>
+          </ul>
+          <p class="acesso"> <strong>Acesse Também</strong><br />
+            <a href="https://sp.senai.br/unidade/suicobrasileira/">SENAI Suíço-Brasileira</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Funcionalidades -->
+    <script src="assets/js/main.js" defer></script>
+
+</body>
+
+</html>
