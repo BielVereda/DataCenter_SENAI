@@ -1,0 +1,498 @@
+@import url('./global.css');
+
+/* ==================== HERO ==================== */
+.hero {
+  text-align: center;
+  padding: 40px 10px;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111;
+}
+
+.frase-impacto {
+  font-weight: 600;
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: #111;
+}
+
+/* ==================== DESCRIÇÕES ==================== */
+.descricao-breve,
+.descricao-detalhada {
+  background: #f4f4f4;
+  margin: 20px auto;
+  padding: 20px;
+  width: 90%;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* ==================== CARROSSEL DE HACKS ==================== */
+.carrossel-servidores {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.hack-container {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.6s ease-in-out;
+}
+
+.hack {
+  flex-shrink: 0;
+  width: 200px;
+  height: 250px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: all 0.4s ease;
+}
+
+.hack img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: all 0.4s ease;
+}
+
+.hack h3 {
+  position: absolute;
+  bottom: 10px;
+  width: 90%;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  color: #000;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 600;
+  z-index: 5;
+}
+
+.hack.destaque {
+  opacity: 1;
+}
+
+.card-container {
+  width: 250px;
+  height: 300px;
+  position: relative;
+  cursor: pointer;
+  border: 1.5px solid #e30613;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease;
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.4s ease;
+}
+
+.card-back {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.card-container.flipped .card-front {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.card-container.flipped .card-back {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.card-front img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card-front h3,
+.card-back h3 {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #e30613;
+}
+
+.card-back p {
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.botao-acesso {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 24px;
+  background-color: #e30613;
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.botao-acesso:hover {
+  background-color: #ffffff;
+  border: 1.5px solid #e30613;
+  padding: 6.5px 22.5px;
+  color: #000;
+}
+
+
+.card-container {
+  width: 250px;
+  height: 300px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.carrossel {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 40px;
+}
+
+/* ====== SETAS CARROSSEL ====== */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-100%);
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  font-size: 2rem;
+  width: 50px;
+  height: 50px;
+  color: #e30613;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 997;
+}
+
+.nav-btn:hover {
+  background: #e30613;
+  color: #fff;
+}
+
+.nav-btn.prev {
+  left: 5%;
+}
+
+.nav-btn.next {
+  right: 5%;
+}
+
+/* ===================== CARÔMETRO ===================== */
+.carrossel-participantes {
+  text-align: center;
+  padding: 100px 0 60px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.carometro-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  height: 300px;
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carometro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-style: preserve-3d;
+  transform: translate(-55%, -40%) rotateY(0deg);
+  width: 100%;
+  height: 100%;
+}
+
+.participante {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transition: transform 1s ease, opacity 1s ease, filter 1s ease;
+}
+
+.participante img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.participante p {
+  margin-top: 10px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.participante.tras {
+  filter: grayscale(100%);
+  opacity: 0.5;
+  transform: scale(0.8);
+}
+
+.caro-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  color: #e30613;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.caro-btn.prev {
+  left: 10px;
+}
+
+.caro-btn.next {
+  right: 10px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.btn-fotos {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* centraliza o botão horizontalmente */
+  margin-top: 50px;
+}
+
+.botao-acesso {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 24px;
+  background-color: #e30613;
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1rem;
+  border: 0 solid transparent;
+}
+
+.botao-acesso:hover {
+  background-color: #ffffff;
+  border: 1.5px solid #e30613;
+  padding: 6.5px 22.5px;
+  color: #000;
+}
+
+/* seta */
+.seta-acesso {
+  width: 20px;
+  height: auto;
+  transform: translateY(1px); /* ajusta verticalmente */
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.botao-acesso:hover .seta-acesso {
+  filter: invert(1);   /* volta para cor escura ou preta no hover */
+}
+
+/* ===================== RESPONSIVIDADE ===================== */
+@media (max-width: 500px) {
+
+  h1 {
+    margin-top: 90px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    background: #e30613;
+    z-index: 99;
+    max-width: 100%;
+    top: 0;
+    right: 0;
+    transform: translateY(-100%);
+    opacity: 0.8;
+    transition: transform 0.35s ease, opacity 0.35s ease;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .btn-fotos{
+    margin-top: 0;
+    margin-bottom: 80px;
+  }
+
+  .carometro-wrapper {
+    max-width: 550px;
+    height: 220px;
+  }
+
+  .participante {
+    transform-origin: center center -200px !important;
+  }
+
+  .participante img {
+    width: 70px;
+    height: 70px;
+  }
+
+  h1 {
+    margin-top: 90px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    background: #e30613;
+    padding: 40px 20px;
+    z-index: 997;
+    max-width: 100%;
+    min-height: 80vh;
+    top: 0;
+    right: 0;
+    transform: translateY(-100%);
+    opacity: 0.8;
+    transition: transform 0.35s ease, opacity 0.35s ease;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0);
+  }
+
+  .carrossel-participantes {
+    padding: 60px 0 40px 0;
+  }
+
+  .carometro-wrapper {
+    max-width: 100%;
+    height: auto;
+    perspective: none;
+    overflow-x: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    margin-bottom: 0;
+  }
+
+  .carometro-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+
+  .carometro {
+    position: static;
+    transform: none;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    width: auto;
+    height: auto;
+  }
+
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .carousel-item {
+    flex: 0 0 auto;
+    width: 200px;
+    margin: 0 10px;
+  }
+
+  .participante {
+    position: static;
+    transform: none !important;
+    opacity: 1;
+    filter: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    scroll-snap-align: center;
+    min-width: 80px;
+  }
+
+  .participante img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .participante p {
+    font-size: 0.8rem;
+    margin-top: 6px;
+  }
+}
+
+@media (max-width: 900px) {
+  .carometro-wrapper {
+    max-width: 700px;
+    height: 250px;
+    margin-bottom: 0;
+  }
+
+  .participante {
+    transform-origin: center center -250px !important;
+  }
+
+  .participante img {
+    width: 85px;
+    height: 85px;
+  }
+}
