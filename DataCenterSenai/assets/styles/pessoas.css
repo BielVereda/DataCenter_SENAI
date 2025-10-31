@@ -95,6 +95,10 @@ h3 {
   align-self: center;
 }
 
+.botoes a img:hover{
+    scale: 1.3;
+  }
+
 /* Botões Redes Sociais */
 .botao-linkedin,
 .botao-github {
@@ -198,5 +202,9 @@ h3 {
   .carrossel-container {
     overflow-x: scroll; /* touch sem barra */
     -webkit-overflow-scrolling: touch;
+  }
+
+  .prev , .next{
+    display: none;
   }
 }
