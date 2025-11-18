@@ -216,4 +216,30 @@ h3 {
   .next {
     display: none;
   }
+
+  /* ====== MENU MOBILE ====== */
+  .nav-links {
+    flex-direction: column;
+    background: #e30613;
+    padding: 40px 20px;
+    z-index: 997;
+    width: 100%;
+    min-height: 80vh;
+    right: 0;
+    top: 0;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform 0.35s ease, opacity 0.35s ease;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0);
+    border-radius: 0;
+    margin-top: 70px; /* espaço abaixo do header */
+  }
+
+  .nav-links.show {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

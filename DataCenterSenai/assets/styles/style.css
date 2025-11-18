@@ -352,6 +352,11 @@
   filter: invert(1); /* volta para cor escura ou preta no hover */
 }
 
+.carrossel-servidores,
+.carometro-wrapper {
+  overflow: hidden; /* sem scroll no desktop */
+}
+
 /* ===================== RESPONSIVIDADE ===================== */
 @media (max-width: 500px) {
   h1 {
@@ -435,14 +440,15 @@
     max-width: 100%;
     height: auto;
     perspective: none;
-    overflow-x: auto;
+    overflow-x: auto; /* scroll no mobile */
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
     padding: 20px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: 20px;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
     margin-bottom: 0;
   }
 
@@ -491,6 +497,12 @@
   .participante p {
     font-size: 0.8rem;
     margin-top: 6px;
+  }
+
+  /* Esconde setas no mobile */
+  .nav-btn,
+  .caro-btn {
+    display: none;
   }
 }
 

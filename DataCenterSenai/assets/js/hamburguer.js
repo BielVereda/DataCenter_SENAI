@@ -35,7 +35,6 @@ if (menuBtn && navLinks) {
       });
 
       setTimeout(() => animating = false, 350);
-      navLinks.style.display = "none";
 
     } else {
       // Fechando menu
