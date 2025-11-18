@@ -60,6 +60,6 @@ atualizarCarrossel();
 if (window.matchMedia("(max-width: 700px)").matches) {
   const primeiroHack = hacks[0];
   primeiroHack.classList.add("destaque");
-  primeiroHack.style.opacity = "1";
-  primeiroHack.querySelector("img").src = "./assets/img/racks/rack_vermelho.svg";
+  primeiroHack.style.opacity = "0.5";
+  primeiroHack.querySelector("img").src = "./assets/img/racks/rack_cinza.svg";
 }
