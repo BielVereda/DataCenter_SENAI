@@ -391,6 +391,39 @@
     margin-bottom: 80px;
   }
 
+  .carrossel-servidores {
+    overflow: visible;
+    padding: 10px 0;
+  }
+
+  .hack-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 16px;
+    padding: 0 16px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    transform: none !important;
+  }
+
+  .hack-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .card-container {
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    width: 240px;
+    height: 300px;
+  }
+
+  .nav-btn {
+    display: none;
+  }
+
   .carometro-wrapper {
     max-width: 550px;
     height: 220px;
@@ -440,7 +473,7 @@
     max-width: 100%;
     height: auto;
     perspective: none;
-    overflow-x: auto; /* scroll no mobile */
+    overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
@@ -499,26 +532,7 @@
     margin-top: 6px;
   }
 
-  /* Esconde setas no mobile */
-  .nav-btn,
   .caro-btn {
     display: none;
-  }
-}
-
-@media (max-width: 900px) {
-  .carometro-wrapper {
-    max-width: 700px;
-    height: 250px;
-    margin-bottom: 0;
-  }
-
-  .participante {
-    transform-origin: center center -250px !important;
-  }
-
-  .participante img {
-    width: 85px;
-    height: 85px;
   }
 }

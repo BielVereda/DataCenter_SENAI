@@ -1,4 +1,4 @@
-// ===================== HACKS SUAVE (CORRIGIDO) =====================
+// ===================== HACKS SUAVE (VERSÃO ANTIGA) =====================
 const container = document.querySelector(".hack-container");
 const nextBtn = document.querySelector(".next");
 const prevBtn = document.querySelector(".prev");
@@ -8,9 +8,7 @@ let current = 0;
 
 const cardContainers = document.querySelectorAll(".card-container");
 
-let targetX = 0;
-let currentX = 0;
-
+// Atualiza o carrossel e define o item ativo
 function atualizarCarrossel() {
   hacks.forEach((h, i) => {
     h.classList.remove("destaque");
@@ -26,15 +24,12 @@ function atualizarCarrossel() {
   const hackWidth = ativo.offsetWidth + parseInt(getComputedStyle(container).gap || 0);
   const containerWidth = container.offsetWidth;
   const desloc = -(hackWidth * current - containerWidth / 2 + hackWidth / 2);
+
+  // 👉 aplica direto o deslocamento (sem animação suave)
   container.style.transform = `translateX(${desloc}px)`;
 }
 
-// animação suave usando lerp
-function animar() {
-  currentX += (targetX - currentX) * 0.15;
-  container.style.transform = `translateX(${currentX}px)`;
-  requestAnimationFrame(animar);
-}
+// Botões de navegação
 nextBtn.addEventListener("click", () => {
   current = (current + 1) % total;
   atualizarCarrossel();
@@ -45,6 +40,7 @@ prevBtn.addEventListener("click", () => {
   atualizarCarrossel();
 });
 
+// Clique direto nos hacks
 hacks.forEach((h, i) => {
   h.addEventListener("click", () => {
     if (i !== current) current = i;
@@ -52,10 +48,12 @@ hacks.forEach((h, i) => {
   });
 });
 
+// Flip dos cards
 cardContainers.forEach((container) => {
   container.addEventListener("click", () => {
     container.classList.toggle("flipped");
   });
 });
 
+// Inicialização
 atualizarCarrossel();
