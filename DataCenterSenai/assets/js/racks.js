@@ -8,7 +8,6 @@ let current = 0;
 
 const cardContainers = document.querySelectorAll(".card-container");
 
-// Atualiza o carrossel e define o item ativo
 function atualizarCarrossel() {
   hacks.forEach((h, i) => {
     h.classList.remove("destaque");
@@ -25,7 +24,6 @@ function atualizarCarrossel() {
   const containerWidth = container.offsetWidth;
   const desloc = -(hackWidth * current - containerWidth / 2 + hackWidth / 2);
 
-  // 👉 aplica direto o deslocamento (sem animação suave)
   container.style.transform = `translateX(${desloc}px)`;
 }
 
@@ -57,3 +55,11 @@ cardContainers.forEach((container) => {
 
 // Inicialização
 atualizarCarrossel();
+
+// Força o primeiro rack a ficar vermelho no mobile logo ao carregar
+if (window.matchMedia("(max-width: 700px)").matches) {
+  const primeiroHack = hacks[0];
+  primeiroHack.classList.add("destaque");
+  primeiroHack.style.opacity = "1";
+  primeiroHack.querySelector("img").src = "./assets/img/racks/rack_vermelho.svg";
+}
