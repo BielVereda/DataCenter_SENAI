@@ -344,17 +344,16 @@
 .seta-acesso {
   width: 20px;
   height: auto;
-  transform: translateY(1px); /* ajusta verticalmente */
+  transform: translateY(1px);
   transition: filter 0.3s ease, transform 0.3s ease;
 }
 
 .botao-acesso:hover .seta-acesso {
-  filter: invert(1); /* volta para cor escura ou preta no hover */
+  filter: invert(1);
 }
 
-.carrossel-servidores,
-.carometro-wrapper {
-  overflow: hidden; /* sem scroll no desktop */
+.carrossel-servidores{
+  overflow: hidden;
 }
 
 /* ===================== RESPONSIVIDADE ===================== */
