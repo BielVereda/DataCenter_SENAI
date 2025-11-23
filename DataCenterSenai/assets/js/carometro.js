@@ -1,15 +1,10 @@
 // ===================== CARÔMETRO 3D =====================
 const participantes = [
-  { nome: "Prof. Ricardo", foto: "./assets/img/peoples/pessoa.svg" },
-  { nome: "Fulano da Silva", foto: "./assets/img/peoples/pessoa.svg" },
-  { nome: "Ciclano Souza", foto: "./assets/img/peoples/pessoa.svg" },
-  { nome: "Beltrano Pereira", foto: "./assets/img/peoples/pessoa.svg" },
-  { nome: "Profª Juliana", foto: "./assets/img/peoples/pessoa.svg" },
-  { nome: "Mariana Lima", foto: "./assets/img/peoples/pessoa.svg" },
-  { nome: "Carlos Mendes", foto: "./assets/img/peoples/pessoa.svg" },
-  { nome: "Ana Paula", foto: "./assets/img/peoples/pessoa.svg" },
-  { nome: "Gustavo Rocha", foto: "./assets/img/peoples/pessoa.svg" },
-  { nome: "João Ricardo", foto: "./assets/img/peoples/pessoa.svg" },
+  { nome: "Prof° Lucas Corrêa", foto: "./assets/img/peoples/carometro/LucasCorrea.jpg" },
+  { nome: "Profª Fiama Brenda", foto: "./assets/img/peoples/pessoa.svg" },
+  { nome: "Prof° Wellington", foto: "./assets/img/peoples/pessoa.svg" },
+  { nome: "Prof° Matias", foto: "./assets/img/peoples/pessoa.svg" },
+  { nome: "Prof° Carlos Fabbri", foto: "./assets/img/peoples/pessoa.svg" },
 ];
 
 const carometro = document.getElementById("carometro");
@@ -60,7 +55,7 @@ function ajustarRaioCarometro() {
   if (!carometro || participantes.length === 0) return;
 
   const larguraTela = window.innerWidth;
-  let raioBase = 300; // valor original
+  let raioBase = 300;
 
   // ajusta o raio conforme o tamanho da tela
   if (larguraTela < 380) raioBase = 120;

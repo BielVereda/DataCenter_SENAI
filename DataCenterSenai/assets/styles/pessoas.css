@@ -181,11 +181,14 @@ h3 {
 
   h2 {
     margin-bottom: 20px;
+    background-color: #e30613;
+    color: #f0f0f0;
   }
 
   .card {
     width: 140px;
     min-width: 140px;
+    margin-left: 0;
   }
 
   .card .foto {
@@ -210,6 +213,8 @@ h3 {
   .carrossel-container {
     overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
+    margin-left: 0;
+    padding-left: 0;
   }
 
   .prev,

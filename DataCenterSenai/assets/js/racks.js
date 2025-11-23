@@ -56,10 +56,11 @@ cardContainers.forEach((container) => {
 // Inicialização
 atualizarCarrossel();
 
-// Força o primeiro rack a ficar vermelho no mobile logo ao carregar
+// Força TODOS os racks a ficarem vermelhos no mobile logo ao carregar
 if (window.matchMedia("(max-width: 700px)").matches) {
-  const primeiroHack = hacks[0];
-  primeiroHack.classList.add("destaque");
-  primeiroHack.style.opacity = "0.5";
-  primeiroHack.querySelector("img").src = "./assets/img/racks/rack_cinza.svg";
+  hacks.forEach((hack) => {
+    hack.classList.add("destaque");
+    hack.style.opacity = "1";
+    hack.querySelector("img").src = "./assets/img/racks/rack_vermelho.svg";
+  });
 }
