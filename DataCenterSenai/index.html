@@ -5,10 +5,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DataCenter SENAI</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+  
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"></noscript>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link rel="stylesheet" href="./assets/styles/style.css" />
   <meta name="description" content="Esta página é a principal página do projeto 'Data-Center SENAI', seja bem-vindo!">
-  <link rel="icon" type="image/svg" sizes="32x32" href="./assets/img/logo/logo-site.svg">
+  
+  <link rel="preload icon" as="image" type="image/svg+xml" sizes="32x32" href="./assets/img/logo/logo-site.svg">
+  <link rel="preload" as="image" href="assets/img/logo/logo_branco_vermelho.svg">
 </head>
 
 <body>
@@ -32,7 +39,7 @@
           <p><a href="./assets/pages/pagina-servidor6.html">Central de Câmeras e GitLab</a></p>
         </div>
         <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
-          <img src="assets/img/components/menu_hamburger.svg" alt="Menu" />
+          <img src="assets/img/components/menu_hamburger.svg" alt="Menu" loading="eager"/>
         </button>
       </nav>
     </div>
@@ -58,14 +65,18 @@
           <div class="card">
             <div class="card-front">
               <div class="hack" data-index="0">
-                <img src="assets/img/racks/rack_cinza.svg" alt="Hack 1" />
+                <img src="assets/img/racks/rack_cinza.svg" alt="Hack 1" loading="eager"/>
                 <h3>Servidor 1</h3>
               </div>
             </div>
             <div class="card-back">
               <h3>Armazenamento, Apache e FTP</h3>
               <p>Servidor dedicado à hospedagem de dados e transferência segura de arquivos.</p>
-              <a href="./assets/page/servidor1.html" class="botao-acesso">Acessar</a>
+              <div class="btn-projeto">
+                <a href="./assets/pages/servidor1.html" class="botao-acesso"> Acessar
+                  <img src="./assets/img/components/seta-acessar.svg" alt="Acessar Servidor 1" class="seta-acesso">
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -74,14 +85,18 @@
           <div class="card">
             <div class="card-front">
               <div class="hack" data-index="1">
-                <img src="assets/img/racks/rack_cinza.svg" alt="Hack 2" />
+                <img src="assets/img/racks/rack_cinza.svg" alt="Hack 2" loading="eager"/>
                 <h3>Servidor 2</h3>
               </div>
             </div>
             <div class="card-back">
               <h3>VMware ESXi e pfSense</h3>
               <p>Responsável pela virtualização de sistemas e proteção do tráfego de rede.</p>
-              <a href="./assets/page/servidor2.html" class="botao-acesso">Acessar</a>
+              <div class="btn-projeto">
+                <a href="./assets/pages/servidor2.html" class="botao-acesso"> Acessar
+                  <img src="./assets/img/components/seta-acessar.svg" alt="Acessar Servidor 2" class="seta-acesso">
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -90,14 +105,18 @@
           <div class="card">
             <div class="card-front">
               <div class="hack" data-index="2">
-                <img src="assets/img/racks/rack_cinza.svg" alt="Hack 3" />
+                <img src="assets/img/racks/rack_cinza.svg" alt="Hack 3" loading="eager"/>
                 <h3>Servidor 3</h3>
               </div>
             </div>
             <div class="card-back">
               <h3>Active Directory (AD) e DNS</h3>
               <p>Gerencia usuários e dispositivos e garante a comunicação entre servidores.</p>
-              <a href="./assets/page/servidor3.html" class="botao-acesso">Acessar</a>
+              <div class="btn-projeto">
+                <a href="./assets/pages/servidor3.html" class="botao-acesso"> Acessar
+                  <img src="./assets/img/components/seta-acessar.svg" alt="Acessar Servidor 3" class="seta-acesso">
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -106,14 +125,18 @@
           <div class="card">
             <div class="card-front">
               <div class="hack" data-index="3">
-                <img src="assets/img/racks/rack_cinza.svg" alt="Hack 4" />
+                <img src="assets/img/racks/rack_cinza.svg" alt="Hack 4" loading="lazy"/>
                 <h3>Servidor 4</h3>
               </div>
             </div>
             <div class="card-back">
               <h3>AD de Leitura e DNS Secundário</h3>
               <p>Fornece redundância e estabilidade ao sistema principal de autenticação e nomes.</p>
-              <a href="./assets/page/servidor4.html" class="botao-acesso">Acessar</a>
+              <div class="btn-projeto">
+                <a href="./assets/pages/servidor4.html" class="botao-acesso"> Acessar
+                  <img src="./assets/img/components/seta-acessar.svg" alt="Acessar Servidor 4" class="seta-acesso">
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -122,14 +145,18 @@
           <div class="card">
             <div class="card-front">
               <div class="hack" data-index="4">
-                <img src="assets/img/racks/rack_cinza.svg" alt="Hack 5" />
+                <img src="assets/img/racks/rack_cinza.svg" alt="Hack 5" loading="lazy"/>
                 <h3>Servidor 5</h3>
               </div>
             </div>
             <div class="card-back">
               <h3>Zabbix, Splunk/Wazuh e VMware ESXi</h3>
               <p>Realiza o monitoramento da rede e a análise de desempenho e segurança.</p>
-              <a href="./assets/pages/servidor5.html" class="botao-acesso">Acessar</a>
+              <div class="btn-projeto">
+                <a href="./assets/pages/servidor5.html" class="botao-acesso"> Acessar
+                  <img src="./assets/img/components/seta-acessar.svg" alt="Acessar Servidor 5" class="seta-acesso">
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -138,14 +165,18 @@
           <div class="card">
             <div class="card-front">
               <div class="hack" data-index="5">
-                <img src="assets/img/racks/rack_cinza.svg" alt="Hack 3" />
+                <img src="assets/img/racks/rack_cinza.svg" alt="Hack 3" loading="lazy"/>
                 <h3>Servidor 6</h3>
               </div>
             </div>
             <div class="card-back">
               <h3>Central de Câmeras e GitLab</h3>
               <p>Integra o monitoramento físico e o gerenciamento de código e sistemas.</p>
-              <a href="./assets/page/servidor6.html" class="botao-acesso">Acessar</a>
+              <div class="btn-projeto">
+                <a href="./assets/pages/servidor6.html" class="botao-acesso"> Acessar
+                  <img src="./assets/img/components/seta-acessar.svg" alt="Acessar Servidor 6" class="seta-acesso">
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -213,10 +244,10 @@
     </div>
   </footer>
 
-  <script src="./assets/js/racks.js" defer></script>
-  <script src="./assets/js/hamburguer.js" defer></script>
-  <script src="./assets/js/carometro.js" defer></script>
-  <script src="./assets/js/button-fotos.js" defer></script>
+  <script src="./assets/js/racks.js"></script>
+  <script src="./assets/js/hamburguer.js"></script>
+  <script src="./assets/js/carometro.js"></script>
+  <script src="./assets/js/button-fotos.js"></script>
 </body>
 
 </html>
