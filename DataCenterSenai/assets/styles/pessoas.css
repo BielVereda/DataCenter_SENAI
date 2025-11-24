@@ -7,7 +7,11 @@ h1 {
 }
 
 h2 {
-  margin: 80px 0 10px 0;
+  margin: 80px 100px 20px 100px;
+  background-color: #e30613;
+  color: #f0f0f0;
+  border-radius: 10px;
+  padding: 10px 0;
 }
 
 h3 {
@@ -180,9 +184,11 @@ h3 {
   }
 
   h2 {
-    margin-bottom: 20px;
-    background-color: #e30613;
-    color: #f0f0f0;
+    margin-bottom: 15px;
+    padding-top: 15px;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 
   .card {
