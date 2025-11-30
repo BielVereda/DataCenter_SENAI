@@ -30,7 +30,7 @@
   text-align: center;
 }
 
-/* ==================== CARROSSEL DE HACKS ==================== */
+/* ==================== CARROSSEL DE RACKS ==================== */
 .carrossel-servidores {
   position: relative;
   width: 100%;
@@ -41,7 +41,7 @@
   margin: auto;
 }
 
-.hack-container {
+.rack-container {
   display: flex;
   gap: 30px;
   justify-content: center;
@@ -49,7 +49,7 @@
   transition: transform 0.6s ease-in-out;
 }
 
-.hack {
+.rack {
   flex-shrink: 0;
   width: 200px;
   height: 250px;
@@ -62,7 +62,7 @@
   transition: all 0.4s ease;
 }
 
-.hack img {
+.rack img {
   width: 100%;
   height: 180px;
   object-fit: cover;
@@ -70,7 +70,7 @@
   transition: all 0.4s ease;
 }
 
-.hack h3 {
+.rack h3 {
   position: absolute;
   bottom: 10px;
   width: 90%;
@@ -83,7 +83,7 @@
   z-index: 5;
 }
 
-.hack.destaque {
+.rack.destaque {
   opacity: 1;
 }
 
@@ -395,7 +395,7 @@
     padding: 10px 0;
   }
 
-  .hack-container {
+  .rack-container {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: x mandatory;
@@ -408,7 +408,7 @@
     transform: none !important;
   }
 
-  .hack-container::-webkit-scrollbar {
+  .rack-container::-webkit-scrollbar {
     display: none;
   }
 
