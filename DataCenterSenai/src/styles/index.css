@@ -41,7 +41,7 @@
   margin: auto;
 }
 
-.rack-container {
+.hack-container {
   display: flex;
   gap: 30px;
   justify-content: center;
@@ -49,7 +49,7 @@
   transition: transform 0.6s ease-in-out;
 }
 
-.rack {
+.hack {
   flex-shrink: 0;
   width: 200px;
   height: 250px;
@@ -62,7 +62,7 @@
   transition: all 0.4s ease;
 }
 
-.rack img {
+.hack img {
   width: 100%;
   height: 180px;
   object-fit: cover;
@@ -70,7 +70,7 @@
   transition: all 0.4s ease;
 }
 
-.rack h3 {
+.hack h3 {
   position: absolute;
   bottom: 10px;
   width: 90%;
@@ -83,7 +83,7 @@
   z-index: 5;
 }
 
-.rack.destaque {
+.hack.destaque {
   opacity: 1;
 }
 
