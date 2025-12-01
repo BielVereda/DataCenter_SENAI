@@ -1,10 +1,10 @@
 // ===================== CARÔMETRO 3D =====================
 const participantes = [
-  { nome: "Prof° Lucas Corrêa", foto: "/DataCenterSenai/src/assets/img/peoples/carometro/LucasCorrea.jpg" },
-  { nome: "Profª Fiama Brenda", foto: "/DataCenterSenai/src/assets/img/peoples/pessoa.svg" },
-  { nome: "Prof° Wellington", foto: "/DataCenterSenai/src/assets/img/peoples/pessoa.svg" },
-  { nome: "Prof° Matias", foto: "/DataCenterSenai/src/assets/img/peoples/pessoa.svg" },
-  { nome: "Prof° Carlos Fabbri", foto: "/DataCenterSenai/src/assets/img/peoples/pessoa.svg" },
+  { nome: "Prof° Lucas Corrêa", foto: "/src/assets/img/peoples/carometro/LucasCorrea.jpg" },
+  { nome: "Profª Fiama Brenda", foto: "/src/assets/img/peoples/pessoa.svg" },
+  { nome: "Prof° Wellington", foto: "/src/assets/img/peoples/pessoa.svg" },
+  { nome: "Prof° Matias", foto: "/src/assets/img/peoples/pessoa.svg" },
+  { nome: "Prof° Carlos Fabbri", foto: "/src/assets/img/peoples/pessoa.svg" },
 ];
 
 const carometro = document.getElementById("carometro");
