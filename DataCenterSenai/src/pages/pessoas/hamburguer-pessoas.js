@@ -25,7 +25,7 @@ if (menuBtn && navLinks) {
         iconImg.style.opacity = "0";
 
         setTimeout(() => {
-          iconImg.src = "/DataCenterSenai/src/assets/img/components/arrow.svg";
+          iconImg.src = "/src/assets/img/components/arrow.svg";
           // Força o browser aplicar a mudança de src antes do fade-in
           requestAnimationFrame(() => {
             iconImg.style.transform = "translateY(0)";
@@ -46,7 +46,7 @@ if (menuBtn && navLinks) {
 
       setTimeout(() => {
         // Troca o src **após o fade out** e força o fade in
-        iconImg.src = "/DataCenterSenai/src/assets/img/components/menu_hamburger.svg";
+        iconImg.src = "/src/assets/img/components/menu_hamburger.svg";
         requestAnimationFrame(() => {
           iconImg.style.transform = "translateY(0)";
           iconImg.style.opacity = "1";
