@@ -96,14 +96,14 @@ function atualizarCarrossel() {
     h.classList.remove("destaque");
     h.style.opacity = "0.6";
     const img = h.querySelector("img");
-    if (img) img.src = "/DataCenterSenai/src/assets/img/racks/rack_cinza.svg";
+    if (img) img.src = "/src/assets/img/racks/rack_cinza.svg";
   });
 
   const ativo = hacks[current];
   ativo.classList.add("destaque");
   ativo.style.opacity = "1";
   const imgAtivo = ativo.querySelector("img");
-  if (imgAtivo) imgAtivo.src = "/DataCenterSenai/src/assets/img/racks/rack_vermelho.svg";
+  if (imgAtivo) imgAtivo.src = "/src/assets/img/racks/rack_vermelho.svg";
 
   const hackWidth = ativo.offsetWidth + parseInt(getComputedStyle(container).gap || 0);
   const containerWidth = container.offsetWidth;
