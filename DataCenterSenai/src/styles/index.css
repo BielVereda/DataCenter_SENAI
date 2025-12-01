@@ -191,23 +191,19 @@
 .nav-btn {
   position: absolute;
   top: 50%;
-  transform: translateY(-100%);
-  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-50%);
+  z-index: 1000;
+  color: #fff;
+  background-color: #e30613;
   border: none;
-  border-radius: 50%;
-  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
   width: 50px;
   height: 50px;
-  color: #e30613;
+  border-radius: 50%;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  z-index: 997;
-}
-
-.nav-btn:hover {
-  background: #e30613;
-  color: #fff;
 }
 
 .nav-btn.prev {
@@ -216,6 +212,61 @@
 
 .nav-btn.next {
   right: 5%;
+}
+
+/* ====== MENU HAMBURGUER ====== */
+.nav-links {
+  list-style: none;
+  flex-direction: column;
+  background: #e30613;
+  position: absolute;
+  top: calc(100% + 4px);
+  right: 16px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  z-index: 997;
+  min-width: 410px;
+  min-height: 400px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: transform 0.35s ease, opacity 0.35s ease;
+  pointer-events: none;
+}
+
+.nav-links.show {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* ====== UNDERLINE LINKS ====== */
+nav a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffc1c1;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: #ffc1c1;
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+nav a:hover::after {
+  width: 100%;
 }
 
 /* ===================== CARÔMETRO ===================== */

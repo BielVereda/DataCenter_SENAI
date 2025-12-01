@@ -1,70 +1,37 @@
-// ===================== MENU HAMBURGUER =====================
 const menuBtn = document.querySelector(".menu-toggle");
 const navLinks = document.querySelector(".nav-links");
 
 let isMenuOpen = false;
-let animating = false;
 
 if (menuBtn && navLinks) {
   const iconImg = menuBtn.querySelector("img");
 
   menuBtn.addEventListener("click", () => {
-    if (animating) return;
-    animating = true;
+    navLinks.classList.toggle("show");
+    isMenuOpen = navLinks.classList.contains("show");
 
     iconImg.style.transition = "transform 0.15s, opacity 0.15s";
+    iconImg.style.transform = "translateY(10px)";
+    iconImg.style.opacity = "0";
 
-    if (!isMenuOpen) {
-      // Abrindo menu
-      navLinks.style.display = "flex";
+    setTimeout(() => {
+      iconImg.src = isMenuOpen
+        ? "/DataCenterSenai/src/assets/img/components/arrow.svg"
+        : "/DataCenterSenai/src/assets/img/components/menu_hamburger.svg";
+
       requestAnimationFrame(() => {
-        navLinks.classList.add("show");
-
-        // Fade-out da seta
-        iconImg.style.transform = "translateY(10px)";
-        iconImg.style.opacity = "0";
-
-        setTimeout(() => {
-          iconImg.src = "/DataCenterSenai/src/assets/img/components/arrow.svg";
-          // Força o browser aplicar a mudança de src antes do fade-in
-          requestAnimationFrame(() => {
-            iconImg.style.transform = "translateY(0)";
-            iconImg.style.opacity = "1";
-          });
-        }, 300);
+        iconImg.style.transform = "translateY(0)";
+        iconImg.style.opacity = "1";
       });
-
-      setTimeout(() => animating = false, 350);
-
-    } else {
-      // Fechando menu
-      navLinks.classList.remove("show");
-
-      // Fade-out da seta
-      iconImg.style.transform = "translateY(10px)";
-      iconImg.style.opacity = "0";
-
-      setTimeout(() => {
-        // Troca o src **após o fade out** e força o fade in
-        iconImg.src = "/DataCenterSenai/src/assets/img/components/menu_hamburger.svg";
-        requestAnimationFrame(() => {
-          iconImg.style.transform = "translateY(0)";
-          iconImg.style.opacity = "1";
-        });
-      }, 300);
-
-      setTimeout(() => {
-        navLinks.style.display = "none";
-        animating = false;
-      }, 350);
-    }
-
-    isMenuOpen = !isMenuOpen;
+    }, 200);
   });
 
-  // Fecha se clicar fora
   document.addEventListener("click", (e) => {
-    if (isMenuOpen && !navLinks.contains(e.target) && !menuBtn.contains(e.target)) {
+    if (
+      isMenuOpen &&
+      !navLinks.contains(e.target) &&
+      !menuBtn.contains(e.target)
+    ) {
       menuBtn.click();
     }
   });
