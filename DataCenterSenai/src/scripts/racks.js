@@ -12,13 +12,13 @@ function atualizarCarrossel() {
   hacks.forEach((h, i) => {
     h.classList.remove("destaque");
     h.style.opacity = "0.6";
-    h.querySelector("img").src = "/DataCenterSenai/src/assets/img/racks/rack_cinza.svg";
+    h.querySelector("img").src = "/src/assets/img/racks/rack_cinza.svg";
   });
 
   const ativo = hacks[current];
   ativo.classList.add("destaque");
   ativo.style.opacity = "1";
-  ativo.querySelector("img").src = "/DataCenterSenai/src/assets/img/racks/rack_vermelho.svg";
+  ativo.querySelector("img").src = "/src/assets/img/racks/rack_vermelho.svg";
 
   const hackWidth = ativo.offsetWidth + parseInt(getComputedStyle(container).gap || 0);
   const containerWidth = container.offsetWidth;
@@ -61,6 +61,6 @@ if (window.matchMedia("(max-width: 700px)").matches) {
   hacks.forEach((hack) => {
     hack.classList.add("destaque");
     hack.style.opacity = "1";
-    hack.querySelector("img").src = "/DataCenterSenai/src/assets/img/racks/rack_vermelho.svg";
+    hack.querySelector("img").src = "/src/assets/img/racks/rack_vermelho.svg";
   });
 }
