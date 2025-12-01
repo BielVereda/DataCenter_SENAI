@@ -16,8 +16,8 @@ if (menuBtn && navLinks) {
 
     setTimeout(() => {
       iconImg.src = isMenuOpen
-        ? "/DataCenterSenai/src/assets/img/components/arrow.svg"
-        : "/DataCenterSenai/src/assets/img/components/menu_hamburger.svg";
+        ? "/src/assets/img/components/arrow.svg"
+        : "/src/assets/img/components/menu_hamburger.svg";
 
       requestAnimationFrame(() => {
         iconImg.style.transform = "translateY(0)";
