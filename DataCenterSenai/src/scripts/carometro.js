@@ -1,7 +1,7 @@
 // ===================== CARÔMETRO 3D =====================
 const participantes = [
   { nome: "Prof° Lucas Corrêa", foto: "/src/assets/img/peoples/carometro/LucasCorrea.jpg" },
-  { nome: "Profª Fiama Brenda", foto: "/src/assets/img/peoples/pessoa.svg" },
+  { nome: "Profª Fiama Brenda", foto: "/src/assets/img/peoples/carometro/FiamaBrenda.webp" },
   { nome: "Prof° Wellington", foto: "/src/assets/img/peoples/pessoa.svg" },
   { nome: "Prof° Matias", foto: "/src/assets/img/peoples/pessoa.svg" },
   { nome: "Prof° Carlos Fabbri", foto: "/src/assets/img/peoples/pessoa.svg" },
