@@ -15,6 +15,15 @@ body {
     line-height: 1.6;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+main {
+  min-height: calc(100vh - 200px); /* 200px = altura aproximada do footer */
+}
+
 /* ==================== HEADER ==================== */
 header {
     background: #e30613;
@@ -120,6 +129,7 @@ footer {
     color: #fff;
     margin-top: 40px;
     padding: 40px;
+    margin-top: auto;
 }
 
 .footer-container {
