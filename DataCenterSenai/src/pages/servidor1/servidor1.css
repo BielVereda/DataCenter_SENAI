@@ -53,3 +53,20 @@ nav a::after {
 nav a:hover::after {
   width: 100%;
 }
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-left h4 {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.footer-lists {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}

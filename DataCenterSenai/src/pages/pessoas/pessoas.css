@@ -232,6 +232,7 @@ nav a:hover::after {
   right: 2%;
 }
 
+/* ==================== FOOTER ==================== */
 .footer-left {
   display: flex;
   flex-direction: column;
