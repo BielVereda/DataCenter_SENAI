@@ -207,6 +207,11 @@ footer {
     text-decoration: underline;
 }
 
+.page-content {
+    flex: 1;          /* empurra o footer pro fim da página */
+    padding: 40px;    /* dá um respiro ao texto */
+}
+
 @media (max-width: 500px) {
     header {
         position: fixed;
