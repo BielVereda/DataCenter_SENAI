@@ -6,6 +6,12 @@
     text-decoration: none;
 }
 
+/* Tornando o layout capaz de empurrar o footer para o fim da página */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
     font-family: "Montserrat", sans-serif;
     font-display: swap;
@@ -13,16 +19,19 @@ body {
     color: #000;
     overflow-x: hidden;
     line-height: 1.6;
+
+    /* REGRA A — transforma o body em um layout flex vertical */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-html, body {
-  height: 100%;
-  margin: 0;
+/* Faz o conteúdo ocupar o espaço disponível e empurrar o footer */
+body > h1 {
+    flex: 1;
+    padding: 40px;
 }
 
-main {
-  min-height: calc(100vh - 200px); /* 200px = altura aproximada do footer */
-}
 
 /* ==================== HEADER ==================== */
 header {
@@ -83,12 +92,6 @@ nav {
     transform: translateY(0);
 }
 
-.nav-links.show {
-    display: flex;
-    opacity: 1;
-    transform: translateY(0);
-}
-
 .nav-links a,
 .nav-links p {
     color: #fff;
@@ -127,7 +130,6 @@ nav {
 footer {
     background: #e30613;
     color: #fff;
-    margin-top: 40px;
     padding: 40px;
     margin-top: auto;
 }
@@ -153,7 +155,6 @@ footer {
     justify-content: center;
     align-items: center;
 }
-
 
 .footer-left ul {
     display: flex;
